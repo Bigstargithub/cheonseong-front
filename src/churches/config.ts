@@ -11,12 +11,11 @@
 import type { ChurchConfig } from "./types";
 
 const churchConfig: ChurchConfig = {
-  id: "joobok",
-  name: "주복교회",
-  fullName: "대한예수교 장로회 주복교회",
-  description:
-    "대한예수교 장로회 소속 천안 주복교회는 예배와 말씀, 다음세대 교육을 통해 하나님 나라를 세워가는 기독교 공동체입니다.",
-  domains: ["joobok.or.kr", "www.joobok.or.kr"],
+  id: "cheonseong",
+  name: "천성교회",
+  fullName: "천성교회",
+  description: "천성교회 공식 홈페이지입니다.",
+  domains: ["cheonseong.or.kr", "www.cheonseong.or.kr"],
   logo: {
     pc: "/logo_pc.jpeg",
     mobile: "/logo_pc.jpeg",
@@ -27,19 +26,16 @@ const churchConfig: ChurchConfig = {
   },
   og: {
     image: "/logo_pc.png",
-    url: "https://joobok.or.kr",
-    siteName: "Joobok",
+    url: "https://cheonseong.or.kr",
+    siteName: "Cheonseong",
   },
   contact: {
-    address: "충남 천안시 서북구 두정상가6길 18(두정동)",
-    office: "041-557-0142",
-    pastoral: "041-558-0142",
-    email: "sbson0615@hanmail.net",
+    address: "주소를 입력하세요",
+    office: "",
+    pastoral: "",
+    email: "",
   },
-  social: {
-    facebook: "https://www.facebook.com/joobokchurch/?locale=ko_KR",
-    youtube: "https://www.youtube.com/@%EC%A3%BC%EB%B3%B5%EA%B5%90%ED%9A%8C",
-  },
+  social: {},
   apiUrl: process.env.NEXT_PUBLIC_SERVER_URL ?? "http://localhost:8000",
 };
 

@@ -2,7 +2,7 @@
 module.exports = {
   apps: [
     {
-      name: "joobok-front",
+      name: "cheonseong-front",
       script: "node_modules/next/dist/bin/next",
       args: "start",
       instances: 1,
