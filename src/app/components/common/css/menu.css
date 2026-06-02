@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+.menu-li button {
+  @apply text-blue-700 hover:bg-blue-700 p-10 hover:text-white cursor-pointer rounded-md transition-colors duration-200;
+}
+
+@theme {
+  @keyframes menuopen {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.menu-li {
+  @apply relative z-6;
+}
+
+.intro-menu-ul {
+  @apply mt-[5px] bg-blue-200 rounded-md absolute w-full;
+}
+
+.intro-menu-ul li {
+  @apply w-full m-auto text-center p-[5px];
+}
+
+.main-mobile-menu {
+  @apply text-2xl font-bold;
+}
+
+.sub-mobile-menu {
+  @apply text-lg ml-3 font-medium block mt-2;
+}

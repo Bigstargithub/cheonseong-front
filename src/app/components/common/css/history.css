@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.church-history > div > div > p {
+  @apply mt-2
+}

@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+.admin-menu li {
+  @apply relative;
+}
+
+.admin-menu li p {
+  @apply cursor-pointer;
+}
+
+.setting-area {
+  @apply flex flex-wrap content-center mt-5;
+}
+
+.setting-area h3 {
+  @apply text-xl font-medium mr-5;
+}
+
+.admin-list-table tr {
+  @apply w-full;
+}
+
+.admin-list-table tr td {
+  @apply text-center p-5;
+}
