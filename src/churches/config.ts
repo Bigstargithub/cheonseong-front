@@ -25,9 +25,9 @@ const churchConfig: ChurchConfig = {
     secondaryColor: "#1E3A8A",
   },
   og: {
-    image: "/logo_pc.png",
+    image: "/church_logo.jpeg",
     url: "https://cheonseong.or.kr",
-    siteName: "Cheonseong",
+    siteName: "천성교회",
   },
   contact: {
     address: "서울특별시 은평구 갈현로 121 3층",
