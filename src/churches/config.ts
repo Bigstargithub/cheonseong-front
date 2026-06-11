@@ -30,9 +30,9 @@ const churchConfig: ChurchConfig = {
     siteName: "Cheonseong",
   },
   contact: {
-    address: "주소를 입력하세요",
+    address: "서울특별시 은평구 갈현로 121 3층",
     office: "",
-    pastoral: "",
+    pastoral: "010-2833-1054",
     email: "",
   },
   social: {},

@@ -10,48 +10,8 @@ const menuSections = [
     href: "/user/introduce",
     children: [
       { label: "교회소개", href: "/user/introduce" },
-      { label: "교회연혁", href: "/user/history" },
-      { label: "사역자소개", href: "/user/pastors" },
       { label: "오시는 길", href: "/user/church-location" },
     ],
-  },
-  {
-    title: "예배와 모임",
-    href: "/user/infant",
-    children: [
-      { label: "유치부", href: "/user/infant" },
-      { label: "아동부", href: "/user/children" },
-      { label: "중고등부", href: "/user/teenager" },
-      { label: "청년부", href: "/user/youth" },
-    ],
-  },
-  {
-    title: "설교영상",
-    href: "/user/message-video",
-    children: [],
-  },
-  {
-    title: "교회사역",
-    href: "/user/sunday_school",
-    children: [
-      { label: "장년부 주일학교", href: "/user/sunday_school" },
-      { label: "실버마을 공동체", href: "/user/silver_viliage" },
-      { label: "가정예배", href: "/user/home_worship" },
-      { label: "국내 외 선교", href: "/user/missionary" },
-    ],
-  },
-  {
-    title: "커뮤니티",
-    href: "/user/joobok-square",
-    children: [
-      { label: "주복광장", href: "/user/joobok-square" },
-      { label: "우리들의 추억", href: "/user/activities" },
-    ],
-  },
-  {
-    title: "수도원",
-    href: "/user/abbey",
-    children: [],
   },
 ];
 

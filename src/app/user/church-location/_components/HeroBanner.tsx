@@ -4,7 +4,7 @@ export default function HeroBanner() {
   return (
     <div className="relative w-full h-48 lg:h-72 overflow-hidden">
       <Image
-        src="/church_main.avif"
+        src="/kakaotalk-photo-2026-06-02-220240-001.jpeg"
         fill
         alt="오시는 길 배너"
         className="object-cover brightness-50"
