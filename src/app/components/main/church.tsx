@@ -11,7 +11,7 @@ export default function MainChurchArea({
       <div className="flex flex-col-reverse lg:flex-row relative">
         <div className="lg:w-1/2 flex flex-wrap justify-center content-center py-12 lg:py-16">
           <div className="text-center">
-            <h3 className="lg:text-5xl text-3xl font-bold text-blue-500">
+            <h3 className="lg:text-5xl text-3xl font-bold" style={{ color: "var(--color-primary)" }}>
               교회사역
             </h3>
             <p className="text-sm tracking-tight mt-2">

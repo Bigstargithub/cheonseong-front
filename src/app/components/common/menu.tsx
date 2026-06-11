@@ -14,8 +14,9 @@ export default function CommonMenu() {
         <li className="menu-li" onMouseLeave={() => setMenuOpen("")}>
           <button
             className={
-              menuOpen === "introduce" ? "bg-blue-700 text-white!" : ""
+              menuOpen === "introduce" ? "text-white!" : ""
             }
+            style={menuOpen === "introduce" ? { backgroundColor: "var(--color-primary)" } : {}}
             onMouseEnter={() => setMenuOpen("introduce")}
             onClick={() => router.push("/user/introduce")}
           >

@@ -19,28 +19,41 @@ export default function Home() {
   const [popupIndex, setPopupIndex] = useState(0);
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/main`, {
-      method: "GET",
-      headers: { "Content-Type": "application/json" },
-    }).then(async (data) => {
-      const jsonData = await data.json();
-      setMainData(jsonData);
-    });
-
-    fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/main/popup?is_open=Y`, {
-      method: "GET",
-      headers: { "Content-Type": "application/json" },
-    }).then(async (data) => {
-      const jsonData = await data.json();
-      if (jsonData.popupList) {
-        const closePopups = JSON.parse(localStorage.getItem("closePopups") ?? "{}");
-        const visible = jsonData.popupList.filter((popup: PopupDataType) => {
-          const closeDate = new Date(closePopups[popup.id!]);
-          return !(closeDate && closeDate >= new Date());
+    const fetchData = async () => {
+      try {
+        const mainRes = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/main`, {
+          method: "GET",
+          headers: { "Content-Type": "application/json" },
         });
-        setPopups(visible);
+        const jsonData = await mainRes.json();
+        setMainData(jsonData);
+      } catch (error) {
+        console.error("메인 데이터 로드 실패:", error);
       }
-    });
+
+      try {
+        const popupRes = await fetch(
+          `${process.env.NEXT_PUBLIC_SERVER_URL}/main/popup?is_open=Y`,
+          {
+            method: "GET",
+            headers: { "Content-Type": "application/json" },
+          }
+        );
+        const jsonData = await popupRes.json();
+        if (jsonData.popupList) {
+          const closePopups = JSON.parse(localStorage.getItem("closePopups") ?? "{}");
+          const visible = jsonData.popupList.filter((popup: PopupDataType) => {
+            const closeDate = new Date(closePopups[popup.id!]);
+            return !(closeDate && closeDate >= new Date());
+          });
+          setPopups(visible);
+        }
+      } catch (error) {
+        console.error("팝업 데이터 로드 실패:", error);
+      }
+    };
+
+    void fetchData();
   }, []);
 
   const currentPopup = popups[popupIndex];
@@ -91,19 +104,19 @@ export default function Home() {
         </div>
       )}
 
-      {mainData && (
-        <div>
-          <Image
-            src={`${process.env.NEXT_PUBLIC_SERVER_URL}${mainData.main_banner}`}
-            width={1024}
-            height={0}
-            alt="주복교회"
-            className="w-full aspect-[16/5] object-cover"
-          />
-          <MainYoutubeArea youtubeLink={mainData.youtube_link} />
-          <MainHighlights />
-        </div>
+      {mainData?.main_banner && (
+        <Image
+          src={`${process.env.NEXT_PUBLIC_SERVER_URL}${mainData.main_banner}`}
+          width={1024}
+          height={0}
+          alt="천성교회"
+          className="w-full aspect-[16/5] object-cover"
+        />
       )}
+      {mainData?.youtube_link && (
+        <MainYoutubeArea youtubeLink={mainData.youtube_link} />
+      )}
+      <MainHighlights />
     </main>
   );
 }

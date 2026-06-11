@@ -3,10 +3,17 @@ import Link from "next/link";
 export default function MainYoutubeArea({
   youtubeLink,
 }: {
-  youtubeLink: string;
+  youtubeLink?: string;
 }) {
-  const youtubeURL = new URL(youtubeLink);
-  const youtubeVideoId = youtubeURL.searchParams.get("v");
+  if (!youtubeLink) return null;
+
+  let youtubeVideoId: string | null = null;
+  try {
+    const youtubeURL = new URL(youtubeLink);
+    youtubeVideoId = youtubeURL.searchParams.get("v");
+  } catch {
+    return null;
+  }
 
   return (
     <section className="bg-white py-12 lg:py-16">

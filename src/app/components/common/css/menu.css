@@ -1,7 +1,12 @@
 @import "tailwindcss";
 
 .menu-li button {
-  @apply text-blue-700 hover:bg-blue-700 p-10 hover:text-white cursor-pointer rounded-md transition-colors duration-200;
+  @apply p-10 hover:text-white cursor-pointer rounded-md transition-colors duration-200;
+  color: var(--color-primary);
+}
+
+.menu-li button:hover {
+  background-color: var(--color-primary);
 }
 
 @theme {
@@ -21,7 +26,9 @@
 }
 
 .intro-menu-ul {
-  @apply mt-[5px] bg-blue-200 rounded-md absolute w-full;
+  @apply mt-[5px] rounded-md absolute w-full;
+  background-color: var(--color-primary-light);
+  border: 1px solid #e8d5c4;
 }
 
 .intro-menu-ul li {

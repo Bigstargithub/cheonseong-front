@@ -17,12 +17,12 @@ const churchConfig: ChurchConfig = {
   description: "천성교회 공식 홈페이지입니다.",
   domains: ["cheonseong.or.kr", "www.cheonseong.or.kr"],
   logo: {
-    pc: "/logo_pc.jpeg",
-    mobile: "/logo_pc.jpeg",
+    pc: "/church_logo.jpeg",
+    mobile: "/church_logo.jpeg",
   },
   theme: {
-    primaryColor: "#1e3a5f",
-    secondaryColor: "#4a7fcb",
+    primaryColor: "#8B4513",
+    secondaryColor: "#1E3A8A",
   },
   og: {
     image: "/logo_pc.png",

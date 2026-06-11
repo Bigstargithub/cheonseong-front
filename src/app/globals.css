@@ -7,8 +7,17 @@
 @import "../app/components/common/css/admin.css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FDFAF7;
+  --foreground: #1C1917;
+
+  --color-primary: #8B4513;
+  --color-primary-hover: #6B3410;
+  --color-primary-light: #FDF3EC;
+  --color-secondary: #1E3A8A;
+  --color-secondary-light: #EFF4FB;
+  --color-accent: #D97706;
+  --color-surface: #FDFAF7;
+  --color-text: #1C1917;
 }
 
 @theme inline {
@@ -20,15 +29,15 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --background: #fff;
-    --foreground: #171717;
+    --background: #FDFAF7;
+    --foreground: #1C1917;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #fff;
-    --foreground: #171717;
+    --background: #FDFAF7;
+    --foreground: #1C1917;
   }
 }
 
@@ -43,11 +52,22 @@ body {
 }
 
 .btn-primary {
-  @apply bg-blue-600 text-white hover:bg-blue-700;
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
 }
 
 .btn-outline {
-  @apply border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-primary);
+  color: #ffffff;
 }
 
 .btn-youtube {
